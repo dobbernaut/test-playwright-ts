@@ -12,6 +12,38 @@ There is a sample test suite branch in this repo called `sample-test-suite`. Che
 
 You will need to have [Node](https://nodejs.org/en/) and [yarn](https://classic.yarnpkg.com/en/docs/install) installed and able to run yarn commands. Run the commands shown here from bash or shell.
 
+## Application Accounts and Tokens
+
+This test uses the [Trade Me sandbox](https://www.tmsandbox.co.nz/). You will need to have a user created on the Trade Me sandbox and have generated OAuth tokens for the user to run these. You will then use these information for the environment variables as instrctured on the Test section.
+
+### Create New User
+
+Please go **[here to register and create a new user](https://www.tmsandbox.co.nz/Members/Register.aspx)** **OR** register from the main page.
+
+![register](files/register.png)
+
+And once you have created a new user and logged in, go to the users' **[My Trade Me API Application](https://www.tmsandbox.co.nz/MyTradeMe/Api/MyApplications.aspx)** **OR** open it from My Trade Me
+
+![viewMyTradeMe](files/viewMyTradeMe.png)
+
+![myTradeMeAPIApplications](files/myTradeMeAPIApplications.png)
+
+Go to Developer options and then register a new application. Once you have created a new application, you should see your application from 'Developer options' with a **Consumer key** and a **Consumer secret**. You will then use this to generate an access token for the API.
+
+![viewDeveloperOptions](files/viewDeveloperOptions.png)
+
+![viewRegisterANewApplication](files/viewRegisterANewApplication.png)
+
+### Generate Access Token
+
+To make Trade Me API calls, you will need to to be a Trade Me member and obtain an Oauth token. To create one for yourself, use the access token generator from the **[Trade Me developer site](https://developer.trademe.co.nz/api-overview/authentication/)**.
+
+![generateAccessToken](files/generateAccessToken.png)
+
+Provide the consumer key and secret to generate the oauth token and secret.
+
+You will then use and add all these information to your environment variables.
+
 # Setup
 
 To set up the project, install the node packages by running

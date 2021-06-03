@@ -9,10 +9,10 @@ export const siteUrl: Sites = {
 };
 
 export const testConfig: TestConfig = {
-  headless: false,
+  headless: true,
   viewport: {
     width: 1280,
-    height: 600
+    height: 1024
   }
 };
 
