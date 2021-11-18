@@ -2,14 +2,14 @@ import { WatchlistFilter } from '@enums/watchlist-filter';
 import { MyTradeMe } from '@services/trademe/my-trade-me';
 import { Search } from '@services/trademe/search';
 
-describe('Watchlist', function() {
+describe('Watchlist', function () {
 
   const search = new Search();
   const myTradeMe = new MyTradeMe();
 
   let listingId: number;
 
-  before( async function() {
+  before(async function () {
     await search.general({ category: '0002-0356-', search_string: 'product' })
       .then(response => {
         const searchResults = response.data;
@@ -24,7 +24,7 @@ describe('Watchlist', function() {
       });
   });
 
-  after( async function() {
+  after(async function () {
     await myTradeMe.removeListingFromWatchlist(listingId)
       .then(response => {
         expect(response.data.Success).to.true;
@@ -34,7 +34,7 @@ describe('Watchlist', function() {
       });
   });
 
-  it('should add a listing to user watchlist', async function() {
+  it('should add a listing to user watchlist', async function () {
     await myTradeMe.addListingToWatchlist(listingId)
       .then(response => {
         expect(response.data.Success).to.be.true;
@@ -44,10 +44,10 @@ describe('Watchlist', function() {
       });
   });
 
-  it('should have the added listing on user watchlist', async function() {
+  it('should have the added listing on user watchlist', async function () {
     await myTradeMe.retreiveWatchlist(WatchlistFilter.All)
       .then(response => {
-        const listingIds = response.data.List.map( listing => {
+        const listingIds = response.data.List.map(listing => {
           return listing.ListingId;
         });
         expect(listingIds).to.contain(listingId);

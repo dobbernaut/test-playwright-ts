@@ -3,17 +3,17 @@ import { Computers } from '@enums/listing-sub-categories';
 import { Home } from '@pages/home';
 import { Listings } from '@pages/listings';
 
-describe('Search', function() {
+describe('Search', function () {
 
   let home: Home;
   let listings: Listings;
 
-  before(async function() {
+  before(function () {
     home = new Home(this.page);
     listings = new Listings(this.page);
   });
 
-  it('should return the expected number of listings', async function() {
+  it('should return the expected number of listings', async function () {
     await home.open();
     await home.openMainCategory(Categories.Computers);
     await home.openSubcategory(Computers.Laptops);

@@ -17,7 +17,7 @@ export class Home extends Base {
   private readonly subcategory = '#CategoryNavigator_CategoryPlaceholder';
   private readonly subcategories = '#CategoryNavigator_CategoryPlaceholder li a';
 
-  constructor(page: Page){
+  constructor(page: Page) {
     super(page);
   }
 
@@ -70,6 +70,5 @@ export class Home extends Base {
       expect.fail(`Subcategory "${category}" was not found from subcategories`);
     }
   }
-
 
 }

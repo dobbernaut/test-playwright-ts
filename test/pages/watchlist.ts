@@ -11,7 +11,7 @@ export class Watchlist extends Base {
   private readonly watchlistForm = 'form[action*="Watchlist"][method*=get]';
   private readonly listingsCheckbox = 'td[align="center"] input[type="checkbox"]:not([id*="cmdSelect"])';
 
-  constructor(page: Page){
+  constructor(page: Page) {
     super(page);
   }
 

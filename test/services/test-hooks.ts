@@ -1,6 +1,8 @@
 exports.mochaHooks = {
   async beforeAll() {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const testConfig = require('../config.ts').testConfig;
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     this.browser = await require('playwright').chromium.launch({
       slowMo: testConfig.slowMo,
       headless: testConfig.headless,
@@ -18,6 +20,7 @@ exports.mochaHooks = {
   },
   async afterEach() {
     if (this.currentTest.state === 'failed') {
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
       const addContext = require('mochawesome/addContext');
       const title = this.currentTest.title.replace(/\s/g, '-');
       const screenshotFileName = `${title}_failed.png`;
@@ -25,7 +28,7 @@ exports.mochaHooks = {
         path: `artifacts/gui/mochawesome/assets/${screenshotFileName}`,
         fullPage: true
       });
-      addContext(this, 'assets/' + screenshotFileName);
+      addContext(this, `assets/${screenshotFileName}`);
     }
   }
 };

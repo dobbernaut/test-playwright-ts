@@ -12,8 +12,7 @@ export class Base {
   private readonly login = '#LoginPageButton';
   private readonly logout = 'input[name="logout"]';
 
-
-  constructor(page: Page){
+  constructor(page: Page) {
     this.page = page;
   }
 

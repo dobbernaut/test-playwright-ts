@@ -6,7 +6,7 @@ import { Listings } from '@pages/listings';
 import { Watchlist } from '@pages/watchlist';
 import { Listing } from '@interfaces/listing';
 
-describe('Watchlist', function() {
+describe('Watchlist', function () {
 
   let home: Home;
   let listings: Listings;
@@ -14,7 +14,7 @@ describe('Watchlist', function() {
 
   let listingToAdd: Listing;
 
-  before(async function() {
+  before(async function () {
     home = new Home(this.page);
     listings = new Listings(this.page);
     watchlist = new Watchlist(this.page);
@@ -22,12 +22,12 @@ describe('Watchlist', function() {
     await home.logIn(roles.testRole);
   });
 
-  after(async function() {
+  after(async function () {
     await watchlist.removeListingsFromWatchlist([listingToAdd]);
     await home.logOut();
   });
 
-  it('should add a listing to the user watchlist', async function() {
+  it('should add a listing to the user watchlist', async function () {
     await home.open();
     await home.openMainCategory(Categories.Computers);
     await home.openSubcategory(Computers.Laptops);
