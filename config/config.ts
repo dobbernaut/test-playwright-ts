@@ -9,7 +9,7 @@ export const siteUrl: Sites = {
 };
 
 export const testConfig: TestConfig = {
-  headless: true,
+  headless: process.env.HEADLESS ? process.env.HEADLESS === 'true' : true,
   viewport: {
     width: 1280,
     height: 1024
