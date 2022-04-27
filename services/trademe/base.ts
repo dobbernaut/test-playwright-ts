@@ -1,5 +1,5 @@
 import { inspect } from 'util';
-import { clients } from '@test/config';
+import { clients } from '@config/config';
 import { expect } from 'chai';
 
 export class BaseService {

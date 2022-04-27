@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
-import { siteUrl } from '@test/config';
-import { WatchlistFilter } from '@enums/watchlist-filter';
-import { BaseService } from '@services/trademe/base';
+import { siteUrl } from '@config/config';
+import { WatchlistFilter } from '@constant/watchlist-filter';
+import { BaseService } from '@service/trademe/base';
 
 export class MyTradeMe extends BaseService {
 

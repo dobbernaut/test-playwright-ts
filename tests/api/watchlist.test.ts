@@ -1,6 +1,6 @@
-import { WatchlistFilter } from '@enums/watchlist-filter';
-import { MyTradeMe } from '@services/trademe/my-trade-me';
-import { Search } from '@services/trademe/search';
+import { WatchlistFilter } from '@constant/watchlist-filter';
+import { MyTradeMe } from '@service/trademe/my-trade-me';
+import { Search } from '@service/trademe/search';
 
 describe('Watchlist', function () {
 

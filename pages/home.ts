@@ -1,6 +1,6 @@
 import { Page } from 'playwright';
-import { Base } from '@pages/base';
-import { siteUrl } from '@test/config';
+import { Base } from '@page/base';
+import { siteUrl } from '@config/config';
 
 export class Home extends Base {
 

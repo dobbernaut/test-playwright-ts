@@ -1,4 +1,4 @@
-import { Search } from '@services/trademe/search';
+import { Search } from '@service/trademe/search';
 
 describe('General Search', function () {
 

@@ -1,7 +1,7 @@
-import { Categories } from '@enums/listing-categories';
-import { Computers } from '@enums/listing-sub-categories';
-import { Home } from '@pages/home';
-import { Listings } from '@pages/listings';
+import { Categories } from '@constant/listing-categories';
+import { Computers } from '@constant/listing-sub-categories';
+import { Home } from '@page/home';
+import { Listings } from '@page/listings';
 
 describe('Search', function () {
 

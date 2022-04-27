@@ -8,9 +8,9 @@
     "ci": "rm -fr node_modules && yarn install --frozen-lockfile",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix && npm run lint",
-    "test-ui-parallel": "mocha --parallel -r ./test/services/test-hooks.ts ./test/tests/ui/**/*.e2e.ts",
-    "test-ui": "mocha -r ./test/services/test-hooks.ts ./test/tests/ui/**/*.e2e.ts",
-    "test-api": "mocha ./test/tests/api/**/*.e2e.ts"
+    "test-ui-parallel": "mocha --parallel -r ./services/test-hooks.ts ./tests/ui/**/*.test.ts",
+    "test-ui": "mocha -r ./services/test-hooks.ts ./tests/ui/**/*.test.ts",
+    "test-api": "mocha ./tests/api/**/*.test.ts"
   },
   "devDependencies": {
     "@types/chai": "^4.2.18",

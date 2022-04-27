@@ -1,6 +1,6 @@
 import { ElementHandle, Page } from 'playwright';
-import { Listing } from '@interfaces/listing';
-import { Base } from '@pages/base';
+import { Listing } from '@type/listing';
+import { Base } from '@page/base';
 
 export class Watchlist extends Base {
 
