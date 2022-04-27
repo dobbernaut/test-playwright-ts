@@ -1,7 +1,7 @@
-import { Clients } from '@interfaces/clients';
-import { Roles } from '@interfaces/credentials';
-import { Sites } from '@interfaces/sites';
-import { TestConfig } from '@interfaces/config';
+import { Clients } from '@type/clients';
+import { Roles } from '@type/credentials';
+import { Sites } from '@type/sites';
+import { TestConfig } from '@type/config';
 
 export const siteUrl: Sites = {
   ui: 'https://tmsandbox.co.nz',
@@ -9,10 +9,10 @@ export const siteUrl: Sites = {
 };
 
 export const testConfig: TestConfig = {
-  headless: false,
+  headless: process.env.HEADLESS ? process.env.HEADLESS === 'true' : true,
   viewport: {
     width: 1280,
-    height: 600
+    height: 1024
   }
 };
 

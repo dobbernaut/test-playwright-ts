@@ -19,11 +19,11 @@
       "@types/mocha",
     ],
     "paths": {
-      "@enums/*": ["./test/enums/*"],
-      "@pages/*": ["./test/pages/*"],
-      "@services/*": ["./test/services/*"],
-      "@interfaces/*": ["test/interfaces/*"],
-      "@test/*": ["./test/*"],
+      "@config/*": ["./config/*"],
+      "@constant/*": ["./constants/*"],
+      "@page/*": ["./pages/*"],
+      "@service/*": ["./services/*"],
+      "@type/*": ["./types/*"],
     }
   }
 }

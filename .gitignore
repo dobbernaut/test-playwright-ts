@@ -19,3 +19,15 @@ node_modules/
 # Test temp and build files
 artifacts/
 dist/
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/junit/*
+/libpeerconnection.log
+npm-debug.log
+debug.log
+yarn-error.log
+testem.log
+/typings
