@@ -8,12 +8,14 @@
     "ci": "rm -fr node_modules && yarn install --frozen-lockfile",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix && npm run lint",
+    "test": "mocha",
     "test-ui": "HEADLESS=false mocha --require ./services/test-hooks.ts",
     "test-ui-parallel": "yarn test-ui --parallel",
     "test-ui-headless": "mocha --require ./services/test-hooks.ts",
     "test-ui-headless-parallel": "yarn test-ui-headless --parallel",
     "test-ui-watch": "yarn test-ui --watch",
-    "test-api": "mocha ./tests/api/**/*.test.ts"
+    "test-api": "yarn test ./tests/api/**/*.test.ts",
+    "test-api-parallel": "yarn test-api --parallel"
   },
   "devDependencies": {
     "@types/chai": "^4.2.18",

@@ -18,7 +18,7 @@
     "chai/register-assert"
   ],
   "extension": [
-    ".e2e.ts"
+    ".test.ts"
   ],
   "timeout": 120000,
   "retries": 0,
