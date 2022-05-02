@@ -41,7 +41,7 @@ Have [nvm](https://github.com/nvm-sh/nvm) installed to make it easier to manage 
 
 ```bash
 nvm use
-yarn install
+yarn ci
 ```
 
 ### Adding node packages
@@ -62,16 +62,10 @@ To [add](https://classic.yarnpkg.com/en/docs/cli/add), use `yarn add -D { packag
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 
 # check nvm installed
-command -v nvm
+nvm
 
 # install node
-nvm install node
-
-# or with a specific version
-nvm install node 16.13.0
-
-# it default to the first node installed but to use a different version
-nvm use 16.13.0
+nvm install 16.13.0
 
 # install yarn globally
 npm install -g yarn
@@ -98,17 +92,14 @@ Download the setup.zip file from the [latest release](https://github.com/coreybu
 # check nvm installed
 nvm
 
-# install a version of node
+# install node
 nvm install 16.13.0
 
-# use a version of node
-nvm use 16.13.0
-
-# check if yarn is installed
-yarn -v
-
-# if yarn not installed, install it globally
+# install yarn globally
 npm install -g yarn
+
+# check yarn working properly
+yarn --version
 ```
 
 ## Application Accounts and Tokens
@@ -211,21 +202,21 @@ If you have a test structure like:
 ```
 
 ```bash
-# running test:ui script passing a directory
+# running test-ui script passing a directory
 yarn test-ui test/scenario1
 # will run file-1a and file-1b tests
 
-# running test:ui script passing a file
+# running test-ui script passing a file
 yarn test-ui test/scenario2/file-2a.test.ts
 # will run file-2a test
 ```
 
 ### Run tests in parallel
 
-You can run all the tests in parallel by using the :parallel script. Other scripts have a :parallel variant if you need to run specific test files or directory with test:ui by adding :parallel `yarn test-ui-parallel`.
+You can run all the tests in parallel by using the parallel script. Other scripts have a parallel variant if you need to run specific test files or directory with test:ui by adding parallel `yarn test-ui-parallel`.
 
 ```bash
-# adding :parallel to test:file will run all tests under test/scenario1 in parallel
+# adding -parallel to test-ui will run all tests under test/scenario1 in parallel
 yarn test-ui-parallel test/scenario1
 
 ```
@@ -327,7 +318,7 @@ The IDE will highlight issues and errors based on rules that were set in [.eslin
 - **index.ts** - Use index to export all files from a directory so there's not much clutter from the import statements when importing a few classes or methods from files spread inside the directory eg:
 
 ```
-|-- service
+|-- services
 |   |-- blog-post
 |       |-- blog-post.ts
 |       |-- blog-post-helper.ts
