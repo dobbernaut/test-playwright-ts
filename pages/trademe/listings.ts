@@ -1,6 +1,6 @@
 import { Page } from 'playwright';
 import { Listing } from '@type/listing';
-import { Base } from '@page/base';
+import { Base } from '@page/trademe/base';
 
 export class Listings extends Base {
 

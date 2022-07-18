@@ -1,7 +1,7 @@
 import { Categories } from '@constant/listing-categories';
 import { Computers } from '@constant/listing-sub-categories';
-import { Home } from '@page/home';
-import { Listings } from '@page/listings';
+import { Home } from '@page/trademe/home';
+import { Listings } from '@page/trademe/listings';
 
 describe('Search', function () {
 

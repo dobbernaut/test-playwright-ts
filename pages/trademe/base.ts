@@ -1,6 +1,6 @@
 import { Page } from 'playwright';
 import { Credentials } from '@type/credentials';
-import { siteUrl } from '../config';
+import { siteUrl } from '@config/config';
 
 export class Base {
 

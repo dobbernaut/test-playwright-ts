@@ -1,5 +1,5 @@
 import { Page } from 'playwright';
-import { Base } from '@page/base';
+import { Base } from '@page/trademe/base';
 import { siteUrl } from '@config/config';
 
 export class Home extends Base {
