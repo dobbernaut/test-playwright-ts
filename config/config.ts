@@ -4,8 +4,10 @@ import { Sites } from '@type/sites';
 import { TestConfig } from '@type/config';
 
 export const siteUrl: Sites = {
-  ui: 'https://tmsandbox.co.nz',
-  api: 'https://api.tmsandbox.co.nz/v1',
+  trademe: {
+    ui: 'https://www.tmsandbox.co.nz',
+    api: 'https://api.tmsandbox.co.nz/v1',
+  },
 };
 
 export const testConfig: TestConfig = {
@@ -33,9 +35,10 @@ const getUserName = (): string => {
 };
 
 export const roles: Roles = {
-  testRole: {
+  trademeTestRole: {
     username: getUserName(),
     password: getPassword()
+  },
   }
 };
 

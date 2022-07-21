@@ -22,7 +22,7 @@ export class Home extends Base {
   }
 
   async open(): Promise<void> {
-    await this.page.goto(siteUrl.ui);
+    await this.page.goto(siteUrl.trademe.ui);
   }
 
   async search(search: string): Promise<void> {

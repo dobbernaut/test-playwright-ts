@@ -17,7 +17,7 @@ export class Base {
   }
 
   async logIn(role: Credentials): Promise<void> {
-    await this.page.goto(siteUrl.ui);
+    await this.page.goto(siteUrl.trademe.ui);
     await this.page.click(this.loginLink);
     await this.page.fill(this.email, role.username);
     await this.page.fill(this.password, role.password);

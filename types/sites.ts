@@ -1,4 +1,6 @@
-export interface Sites {
-  ui: string;
-  api: string;
+export type Sites = {
+  trademe: {
+    ui: string;
+    api: string;
+  };
 }

@@ -19,7 +19,7 @@ describe('Watchlist', function () {
     listings = new Listings(this.page);
     watchlist = new Watchlist(this.page);
 
-    await home.logIn(roles.testRole);
+    await home.logIn(roles.trademeTestRole);
   });
 
   after(async function () {
