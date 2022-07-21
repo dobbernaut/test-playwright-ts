@@ -3,4 +3,5 @@ export type Sites = {
     ui: string;
     api: string;
   };
+  sauceDemo: string;
 }

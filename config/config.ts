@@ -8,6 +8,7 @@ export const siteUrl: Sites = {
     ui: 'https://www.tmsandbox.co.nz',
     api: 'https://api.tmsandbox.co.nz/v1',
   },
+  sauceDemo: 'https://www.saucedemo.com/',
 };
 
 export const testConfig: TestConfig = {
@@ -39,6 +40,9 @@ export const roles: Roles = {
     username: getUserName(),
     password: getPassword()
   },
+  sauceDemoRole: {
+    username: 'standard_user',
+    password: 'secret_sauce',
   }
 };
 
