@@ -7,7 +7,12 @@ exports.mochaHooks = {
       slowMo: testConfig.slowMo,
       headless: testConfig.headless,
       chromiumSandbox: false,
-      args: ['--disable-dev-shm-usage']
+      args: [
+        '--disable-gpu',
+        '--disable-logging',
+        '--disable-dev-shm-usage',
+        '--no-sandbox',
+      ]
     });
     this.context = await this.browser.newContext({
       ignoreHTTPSErrors: true,
