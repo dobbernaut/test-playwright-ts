@@ -25,6 +25,7 @@
     "@typescript-eslint/parser": "^4.31.1",
     "axios": "^0.21.1",
     "chai": "^4.2.0",
+    "dotenv": "^16.0.1",
     "eslint": "^7.22.0",
     "eslint-plugin-mocha": "^8.1.0",
     "mocha": "^8.2.1",

@@ -1,6 +1,7 @@
 import { Roles } from '@type/credentials';
 import { Sites } from '@type/sites';
 import { TestConfig } from '@type/config';
+import dotenv from 'dotenv';
 
 export const siteUrl: Sites = {
   jsonplaceholder: 'https://jsonplaceholder.typicode.com',
@@ -16,6 +17,7 @@ export const testConfig: TestConfig = {
 };
 
 const getPassword = (): string => {
+  dotenv.config();
   if (process.env.testpassword) {
     return process.env.testpassword;
   } else {
@@ -26,6 +28,6 @@ const getPassword = (): string => {
 export const roles: Roles = {
   sauceDemoRole: {
     username: 'standard_user',
-    password: 'secret_sauce',
+    password: getPassword(),
   }
 };
