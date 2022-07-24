@@ -8,6 +8,7 @@ export const siteUrl: Sites = {
     ui: 'https://www.tmsandbox.co.nz',
     api: 'https://api.tmsandbox.co.nz/v1',
   },
+  jsonplaceholder: 'https://jsonplaceholder.typicode.com',
   sauceDemo: 'https://www.saucedemo.com/',
 };
 

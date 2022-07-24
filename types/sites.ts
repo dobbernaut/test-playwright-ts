@@ -3,5 +3,6 @@ export type Sites = {
     ui: string;
     api: string;
   };
+  jsonplaceholder: string;
   sauceDemo: string;
 }
