@@ -12,10 +12,7 @@
   "recursive": true,
   "require": [
     "ts-node/register",
-    "tsconfig-paths/register",
-    "chai/register-expect",
-    "chai/register-should",
-    "chai/register-assert"
+    "tsconfig-paths/register"
   ],
   "extension": [
     ".test.ts"
