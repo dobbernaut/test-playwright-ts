@@ -8,7 +8,6 @@ describe('Swag Labs demo app', function () {
   let shoppingCartPage: ShoppingCartPage;
 
   before(async function () {
-    console.log('running before!');
     homePage = new HomePage(this.page);
     inventoryPage = new InventoryPage(this.page);
     shoppingCartPage = new ShoppingCartPage(this.page);

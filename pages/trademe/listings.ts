@@ -27,7 +27,6 @@ export class Listings extends Base {
         title: await this.listingTitle(index)
       });
     }
-    console.log(listings.length);
     return listings;
   }
 
