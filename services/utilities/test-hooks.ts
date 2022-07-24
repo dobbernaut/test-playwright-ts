@@ -1,7 +1,7 @@
 exports.mochaHooks = {
   async beforeAll() {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const testConfig = require('../config/config.ts').testConfig;
+    const testConfig = require('../../config/config.ts').testConfig;
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     this.browser = await require('playwright').chromium.launch({
       slowMo: testConfig.slowMo,
