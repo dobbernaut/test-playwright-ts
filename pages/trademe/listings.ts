@@ -1,6 +1,6 @@
 import { Page } from 'playwright';
 import { Listing } from '@type/listing';
-import { Base } from '@page/base';
+import { Base } from '@page/trademe/base';
 
 export class Listings extends Base {
 
@@ -27,7 +27,6 @@ export class Listings extends Base {
         title: await this.listingTitle(index)
       });
     }
-    console.log(listings.length);
     return listings;
   }
 

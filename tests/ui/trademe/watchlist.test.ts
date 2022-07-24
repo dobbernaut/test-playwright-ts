@@ -1,9 +1,9 @@
 import { roles } from '@config/config';
 import { Categories } from '@constant/listing-categories';
 import { Computers } from '@constant/listing-sub-categories';
-import { Home } from '@page/home';
-import { Listings } from '@page/listings';
-import { Watchlist } from '@page/watchlist';
+import { Home } from '@page/trademe/home';
+import { Listings } from '@page/trademe/listings';
+import { Watchlist } from '@page/trademe/watchlist';
 import { Listing } from '@type/listing';
 
 describe('Watchlist', function () {
@@ -19,7 +19,7 @@ describe('Watchlist', function () {
     listings = new Listings(this.page);
     watchlist = new Watchlist(this.page);
 
-    await home.logIn(roles.testRole);
+    await home.logIn(roles.trademeTestRole);
   });
 
   after(async function () {

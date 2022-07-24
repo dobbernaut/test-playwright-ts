@@ -1,5 +1,5 @@
 import { Page } from 'playwright';
-import { Base } from '@page/base';
+import { Base } from '@page/trademe/base';
 import { siteUrl } from '@config/config';
 
 export class Home extends Base {
@@ -22,7 +22,7 @@ export class Home extends Base {
   }
 
   async open(): Promise<void> {
-    await this.page.goto(siteUrl.ui);
+    await this.page.goto(siteUrl.trademe.ui);
   }
 
   async search(search: string): Promise<void> {

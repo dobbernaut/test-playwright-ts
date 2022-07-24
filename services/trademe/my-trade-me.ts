@@ -7,21 +7,21 @@ export class MyTradeMe extends BaseService {
 
   retreiveWatchlist(filter: WatchlistFilter): Promise<AxiosResponse<any>> {
     return axios.get(
-      `${siteUrl.api}/MyTradeMe/Watchlist/${filter}.json`,
+      `${siteUrl.trademe.api}/MyTradeMe/Watchlist/${filter}.json`,
       { headers: { Authorization: this.memberAuthentication() } }
     );
   }
 
   addListingToWatchlist(listingId: number): Promise<AxiosResponse<any>> {
     return axios.post(
-      `${siteUrl.api}/MyTradeMe/Watchlist/${listingId}.json`, null,
+      `${siteUrl.trademe.api}/MyTradeMe/Watchlist/${listingId}.json`, null,
       { headers: { Authorization: this.memberAuthentication() } }
     );
   }
 
   removeListingFromWatchlist(listingId: number): Promise<AxiosResponse<any>> {
     return axios.delete(
-      `${siteUrl.api}/MyTradeMe/Watchlist/${listingId}.json`,
+      `${siteUrl.trademe.api}/MyTradeMe/Watchlist/${listingId}.json`,
       { headers: { Authorization: this.memberAuthentication() } }
     );
   }
